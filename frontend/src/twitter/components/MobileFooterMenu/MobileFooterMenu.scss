@@ -1,0 +1,39 @@
+@use '../../global' as g;
+
+.mobile-footer-menu {
+    width: 100vw;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    border-top: 1px solid g.$border-colour;
+    background-color: #000000;
+    > nav {
+        width: 100%;
+        > ul {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.6rem 2rem 2.6rem 2rem;
+            > li {
+                width: 2rem;
+                list-style: none;
+                > .mobile-footer-link {
+                    position: relative;
+                    svg {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 1.8rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 800px) {
+    .mobile-footer-menu {
+        display: none;
+    }
+}

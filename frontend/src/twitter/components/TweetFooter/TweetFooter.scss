@@ -1,0 +1,73 @@
+@use '../../global' as g;
+
+.tweet-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 400px;
+    padding: 0.8rem 0 0 0;
+    > .tweet-action {
+        color: g.$secondary-text-colour;
+        padding-left: 2rem;
+        border: none;
+        font-size: 0.9rem;
+        background-position: 0% 50%;
+        background-size: 0.8rem;
+    }
+    .reply-button {
+        background: url('../../assets/images/reply.svg') no-repeat;
+    }
+    .retweet-button {
+        background: url('../../assets/images/retweet.svg') no-repeat;
+    }
+    .retweeted {
+        background: url('../../assets/images/retweeted.svg') no-repeat;
+        color: #53B681;
+    }
+    .like-button {
+        background: url('../../assets/images/like.svg') no-repeat;
+    }
+    .liked {
+        background: url('../../assets/images/liked.svg') no-repeat;
+        color: #E5397F;
+    }
+    .share-button {
+        background: url('../../assets/images/share.svg') no-repeat center;
+        background-size: 0.9rem;
+        border: none;
+        height: 0.9rem;
+        width: 0.9rem;
+        > .hidden {
+            display: none;
+        }
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .tweet-action:hover, .share-button:hover {
+        cursor: pointer;
+    }
+    .reply-button:hover {
+        background: url('../../assets/images/reply-hover.svg') no-repeat center;
+        background-position: 0% 50%;
+        color: g.$primary-blue;
+        transition: 0.3s;
+    }
+    .retweet-button:not(.retweeted):hover {
+        background: url('../../assets/images/retweet-hover.svg') no-repeat center;
+        background-position: 0% 50%;
+        color: #53B681;
+        transition: 0.3s;
+    }
+    .like-button:not(.liked):hover {
+        background: url('../../assets/images/like-hover.svg') no-repeat center;
+        background-position: 0% 50%;
+        color: #E5397F;
+        transition: 0.3s;
+    }
+    .share-button:hover {
+        background: url('../../assets/images/share-hover.svg') no-repeat center;
+        transition: 0.3s;
+    }
+}

@@ -1,0 +1,44 @@
+@use '../../global' as g;
+
+.settings {
+    max-width: 600px;
+    margin: 0 auto;
+    > .settings-main {
+        width: 100%;
+        > .settings-nav {
+            width: 100%;
+            > ul {
+                @include g.flex-column();
+                width: 100%;
+                padding: 1rem;
+                > .settings-link-container {
+                    width: 100%;
+                    list-style: none;
+                    > .settings-link {
+                        width: 100%;
+                        text-decoration: none;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        margin: 1rem 0;
+                        > span {
+                            color: #FFFFFF;
+                            font-size: 0.9rem;
+                        }
+                        > svg {
+                            max-width: 1.3rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 800px) {
+    .settings {
+        border-left: 1px solid g.$border-colour;
+        border-right: 1px solid g.$border-colour;
+        border-bottom: 1px solid g.$border-colour;
+    }
+}

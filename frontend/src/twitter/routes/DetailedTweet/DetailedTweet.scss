@@ -1,0 +1,256 @@
+@use '../../global' as g;
+
+.detailed-tweet {
+    @include g.flex-column();
+    max-width: 600px;
+    margin: 0 auto;
+    > header {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 1rem;
+        border-bottom: 1px solid g.$border-colour;
+        width: 100%;
+        > .back {
+            background: url('../../assets/images/left-arrow.svg') no-repeat center;
+            background-size: 1rem;
+            height: 1rem;
+            width: 1.2rem;
+            border: none;
+            margin-right: 2.3rem;
+            > .hidden {
+                display: none;
+            }
+        }
+        > h1 {
+            font-size: 1rem;
+            color: #FFFFFF;
+        }
+    }
+    > main {
+        width: 100%;
+        @include g.flex-column();
+        > .tweet-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            padding: 1rem;
+            > .tweet-header-main {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                > .profile-pic {
+                    max-width: 2.8rem;
+                    border-radius: 50%;
+                }
+                > .user-details {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: flex-start;
+                    margin-left: 0.8rem;
+                    > .name {
+                        color: #FFFFFF;
+                        font-size: 0.9rem;
+                        font-weight: 700;
+                        min-width: max-content;
+                    }
+                    > .username {
+                        color: g.$secondary-text-colour;
+                        font-size: 0.9rem;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                    }
+                }
+            }
+            .options {
+                background: url('../../assets/images/options-dots.svg') no-repeat center;
+                background-size: 1rem;
+                border: none;
+                height: 1rem;
+                width: 1rem;
+                min-width: 1rem;
+                > .hidden {
+                    display: none;
+                }
+            }
+        }
+        > .tweet-main {
+            padding: 0 1rem;
+            color: #FFFFFF;
+            width: 100%;
+            font-size: 1.3rem;
+            font-weight: 500;
+        }
+        > .tweet-datetime-details {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            padding: 1rem 1rem;
+            color: g.$secondary-text-colour;
+            font-size: 0.9rem;
+            > .separator {
+                height: 2px;
+                width: 2px;
+                border-radius: 50%;
+                margin: 0 0.5rem;
+                background-color: g.$secondary-text-colour;
+            }
+        }
+        > .tweet-interactions-container {
+            width: 100%;
+            @include g.flex-column();
+            > .detailed-tweet-interactions-wrapper {
+                width: 100%;
+                padding: 0 1rem;
+                > .detailed-tweet-interactions-container {
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    border-top: 1px solid g.$border-colour;
+                    padding: 1rem 0.5rem;
+                    > .detailed-tweet-interaction-container {
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: center;
+                        &:first-child {
+                            margin-right: 1rem;
+                        }
+                        color: g.$secondary-text-colour;
+                        > .detailed-tweet-interaction-number {
+                            color: #FFFFFF;
+                            font-weight: 700;
+                        }
+                    }
+                }
+            }
+            > .detailed-tweet-footer-container {
+                padding: 0 1rem;
+                width: 100%;
+                > .detailed-tweet-footer {
+                    padding: 0.8rem 1.5rem;
+                    width: 100%;
+                    border-top: 1px solid g.$border-colour;
+                    border-bottom: 1px solid g.$border-colour;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    > .tweet-action {
+                        background-size: 1.5rem;
+                        height: 1.5rem;
+                        width: 1.5rem;
+                        border: none;
+                        > .hidden {
+                            display: none;
+                        }
+                    }
+                    > .reply-btn {
+                        background: url('../../assets/images/reply.svg') no-repeat center;
+                    }
+                    > .retweet-btn {
+                        background: url('../../assets/images/retweet.svg') no-repeat center;
+                    }
+                    .retweeted {
+                        background: url('../../assets/images/retweeted.svg') no-repeat;
+                        color: #53B681;
+                    }
+                    > .like-btn {
+                        background: url('../../assets/images/like.svg') no-repeat center;
+                    }
+                    .liked {
+                        background: url('../../assets/images/liked.svg') no-repeat;
+                        color: #E5397F;
+                    }
+                    > .share-btn {
+                        background: url('../../assets/images/share.svg') no-repeat center;
+                    }
+                }
+            }
+        }
+        > .reply-container {
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            padding: 1rem 1rem 0.6rem 1rem;
+            width: 100%;
+            border-bottom: 1px solid g.$border-colour;
+            > .active-user-profile-pic {
+                max-width: 2.8rem;
+                border-radius: 50%;
+            }
+            > .reply-actions-container {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: flex-end;
+                width: 100%;
+                > .reply-input {
+                    background-color: transparent;
+                    color: #FFFFFF;
+                    font-size: 1.1rem;
+                    border: none;
+                    padding: 0.8rem 0.5rem 0.5rem 1rem;
+                    width: 100%;
+                    resize: none;
+                    &:focus {
+                        outline: none !important;
+                    }
+                }
+                > .reply-btn {
+                    background-color: g.$primary-blue;
+                    color: #FFFFFF;
+                    font-size: 0.95rem;
+                    font-weight: 700;
+                    padding: 0.5rem 1rem;
+                    border: none;
+                    border-radius: 50px;
+                    &:disabled {
+                        opacity: 0.5;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 800px) {
+    .detailed-tweet {
+        border-left: 1px solid g.$border-colour;
+        border-right: 1px solid g.$border-colour;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .tweet-action:hover, .share-button:hover {
+        cursor: pointer;
+    }
+    .reply-button:hover {
+        background: url('../../assets/images/reply-hover.svg') no-repeat center;
+        background-position: 0% 50%;
+        color: g.$primary-blue;
+        transition: 0.3s;
+    }
+    .retweet-button:not(.retweeted):hover {
+        background: url('../../assets/images/retweet-hover.svg') no-repeat center;
+        background-position: 0% 50%;
+        color: #53B681;
+        transition: 0.3s;
+    }
+    .like-button:not(.liked):hover {
+        background: url('../../assets/images/like-hover.svg') no-repeat center;
+        background-position: 0% 50%;
+        color: #E5397F;
+        transition: 0.3s;
+    }
+    .share-button:hover {
+        background: url('../../assets/images/share-hover.svg') no-repeat center;
+        transition: 0.3s;
+    }
+    .detailed-tweet-interaction-container:hover {
+        cursor: pointer;
+        text-decoration: underline;
+        text-decoration-color: #FFFFFF;
+    }
+}

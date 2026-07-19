@@ -1,0 +1,72 @@
+@use '../../global' as g;
+
+.account-settings {
+    max-width: 600px;
+    margin: 0 auto;
+    > .account-settings-main {
+        width: 100%;
+        padding: 1rem;
+        > .account-settings-description {
+            color: g.$secondary-text-colour;
+            font-size: 0.85rem;
+            width: 100%;
+            margin: 1rem 0;
+        }
+        > .account-settings-nav {
+            width: 100%;
+            > ul {
+                @include g.flex-column();
+                width: 100%;
+                > .account-settings-link-container {
+                    width: 100%;
+                    list-style: none;
+                    > .account-settings-link {
+                        width: 100%;
+                        text-decoration: none;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        margin: 1rem 0;
+                        svg {
+                            max-width: 1.3rem;
+                        }
+                        > .account-settings-link-content {
+                            display: flex;
+                            justify-content: flex-start;
+                            align-items: center;
+                            width: 100%;
+                            > svg {
+                                margin: 0 0.9rem;
+                            }
+                            > .account-settings-link-text {
+                                @include g.flex-column();
+                                max-width: 80%;
+                                margin-left: 0.9rem;
+                                > .link-title {
+                                    color: #FFFFFF;
+                                    font-size: 0.9rem;
+                                    font-weight: 500;
+                                }
+                                > .red-link-title {
+                                    color: g.$primary-red;
+                                }
+                                > .link-description {
+                                    color: g.$secondary-text-colour;
+                                    font-size: 0.8rem;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 800px) {
+    .account-settings {
+        border-left: 1px solid g.$border-colour;
+        border-right: 1px solid g.$border-colour;
+        border-bottom: 1px solid g.$border-colour;
+    }
+}
