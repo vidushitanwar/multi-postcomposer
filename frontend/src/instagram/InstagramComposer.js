@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { getApiUrl } from '../apiConfig';
 
 /**
  * Service Client class wrapping HTTP requests to the backend API,
@@ -7,7 +8,7 @@ import { useNavigate } from 'react-router-dom';
  */
 class PostComposerServiceClient {
   constructor() {
-    this.basePath = '/api/composer-posts';
+    this.basePath = getApiUrl('/api/composer-posts');
   }
 
   /**

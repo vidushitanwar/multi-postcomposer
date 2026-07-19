@@ -2,7 +2,7 @@
   "name": "post-composer-frontend",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://localhost:4000",
+  "proxy": "https://multipost-insta.onrender.com",
   "dependencies": {
     "axios": "^0.26.0",
     "react": "^17.0.2",
