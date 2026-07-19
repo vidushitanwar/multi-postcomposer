@@ -13,7 +13,7 @@ const ShareTweet = ({ tweet, user, activeUser, handleShareView, handleBookmark, 
     }
 
     const handleCopyLink = async () => {
-        await navigator.clipboard.writeText(`https://multipostcomposer1.onrender.com/${user.username}/status/${tweet._id}`);
+        await navigator.clipboard.writeText(`https://multipostcomposer2.onrender.com/${user.username}/status/${tweet._id}`);
         handleShareView();
         window.alert('Link copied to clipboard');
     }
