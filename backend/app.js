@@ -7,7 +7,7 @@ const dotenv = require('dotenv');
 const app = express();
 
 app.use(cors({
-    origin: ['http://localhost:3000', 'http://localhost:4000', 'https://multipostcomposer2.onrender.com'],
+    origin: ['http://localhost:3000', 'http://localhost:4000', 'https://multi-postcomposer.onrender.com'],
     credentials: true,
 }));
 app.use(express.json());
