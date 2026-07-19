@@ -1,4 +1,4 @@
-const API_BASE_URL = process.env.REACT_APP_API_URL || 'https://multipost-insta.onrender.com';
+const API_BASE_URL = process.env.REACT_APP_API_URL || 'https://multipostinsta.onrender.com';
 
 export const getApiUrl = (path = '') => {
   if (!path) return API_BASE_URL;

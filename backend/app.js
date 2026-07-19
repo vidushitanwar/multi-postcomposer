@@ -7,7 +7,7 @@ const dotenv = require('dotenv');
 const app = express();
 
 app.use(cors({
-    origin: ['http://localhost:3000', 'http://localhost:4000', 'https://multipost-insta.onrender.com'],
+    origin: ['http://localhost:3000', 'http://localhost:4000', 'https://multipostinsta.onrender.com'],
     credentials: true,
 }));
 app.use(express.json());
